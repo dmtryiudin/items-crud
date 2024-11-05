@@ -23,7 +23,7 @@ export class AuthService {
     const user = await this.usersService.findOneByUsername(username);
 
     if (!user) {
-      throw new UnauthorizedException();
+      throw new UnauthorizedException('Wrong email or password');
     }
 
     const { password: hashedPassword, ...result } = user;
@@ -31,7 +31,7 @@ export class AuthService {
     const isCorrectPassword = bcrypt.compareSync(password, hashedPassword);
 
     if (!isCorrectPassword) {
-      throw new UnauthorizedException();
+      throw new UnauthorizedException('Wrong email or password');
     }
 
     const accessToken = await this.jwtService.signAsync(result);
@@ -61,6 +61,6 @@ export class AuthService {
     const { password: _, ...result } = newUser;
     const accessToken = await this.jwtService.signAsync(result);
 
-    return { accessToken, user: newUser };
+    return { accessToken };
   }
 }

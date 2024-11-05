@@ -1,0 +1,40 @@
+.wrapper {
+  background-color: #dc2626;
+  font-size: 18px;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.closeButton {
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #dc2626;
+  transition: all;
+  transition-duration: 0.2s;
+
+  &:hover {
+    color: #f87171;
+  }
+
+  &:active {
+    transform: translateY(5px);
+  }
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

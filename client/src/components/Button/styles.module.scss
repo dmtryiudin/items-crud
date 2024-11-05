@@ -1,0 +1,95 @@
+@mixin button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 15px;
+  transition: all;
+  transition-duration: 0.2s;
+  border: 1px solid #0891b2;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.primary {
+  @include button;
+  background-color: #0891b2;
+  color: white;
+
+  &:disabled {
+    cursor: auto;
+  }
+
+  &Enabled {
+    &:hover {
+      background-color: #06b6d4;
+      border-color: #06b6d4;
+    }
+
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+}
+
+.secondary {
+  @include button;
+  color: #0891b2;
+  background-color: white;
+
+  &:disabled {
+    cursor: auto;
+  }
+
+  &Enabled {
+    &:hover {
+      color: #06b6d4;
+      border-color: #06b6d4;
+    }
+
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+}
+
+.danger {
+  @include button;
+  color: white;
+  background-color: #dc2626;
+  border-color: #dc2626;
+
+  &:disabled {
+    cursor: auto;
+  }
+
+  &Enabled {
+    &:hover {
+      background-color: #ef4444;
+      border-color: #ef4444;
+    }
+
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+}
+
+.loaderWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

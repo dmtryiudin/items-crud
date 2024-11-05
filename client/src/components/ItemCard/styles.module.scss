@@ -1,0 +1,36 @@
+.wrapper {
+  border: 1.5px solid #0891b2;
+  padding: 20px;
+
+  font-size: 18px;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.price {
+  color: #6b7280;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
